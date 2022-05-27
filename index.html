@@ -15,27 +15,29 @@
 </head>
 <body>
     <!--Розмічаємо голову сторінки-->
-    <header class="header-clss">
+    <header class="header">
         <div class="container head-container">
+        <!--Розмічаємо навігацію по сайту-->
             <nav class="header-nav">
-                <a href="./index.html" class="logotext link"><span class="logo">Web</span>Studio</a>
+                <a href="./index.html" class="logotext logotext--head link"><span class="logo">Web</span>Studio</a>
                 <ul class="site-nav list">
-                    <li class="li-nav"><a href="./index.html" class="nav-info link current">Студия</a></li>
-                    <li class="li-nav"><a href="./portfolio.html" class="nav-info link">Портфолио</a></li>
-                    <li class="li-nav"><a href="" class="nav-info link">Контакты</a></li>
+                    <li class="site-nav__item"><a href="./index.html" class="site-nav__link link current">Студия</a></li>
+                    <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link link">Портфолио</a></li>
+                    <li class="site-nav__item"><a href="" class="site-nav__link link">Контакты</a></li>
                 </ul>
             </nav>
+            <!--Додаємо контакти в хедер-->
             <ul class="contact-nav list">
-                <li class="contact-li">                                   
-                    <a href="emailto:info@devstudio.com" class="link-cont link">
+                <li class="contact__item">                                   
+                    <a href="emailto:info@devstudio.com" class="contact__link link">
                         <svg class="mylo-icon" width="16" height="12">
                             <use href="./images/symbol-defs.svg#icon-envelopelett"></use>
                         </svg>
                         info@devstudio.com
                     </a>
                 </li>
-                <li class="contact-li">                    
-                    <a href="tel:+380961111111" class="link-cont link">
+                <li class="contact__item">                    
+                    <a href="tel:+380961111111" class="contact__link link">
                         <svg class="tel-icon">
                             <use href="./images/symbol-defs.svg#icon-smartphonesma"></use>
                         </svg>
@@ -59,50 +61,50 @@
             <div class="container">
                 <h2 class="section-title invisible">Наши лучшие качества</h2>
                 <ul class="featers list">
-                    <li class="featers-li">
-                        <div class="place-featers">
-                            <svg class="featers-svg" width="65px" height="70px">
+                    <li class="featers__item">
+                        <div class="featers__place">
+                            <svg class="featers__image" width="65px" height="70px">
                                 <use class="featers-icon" href="./images/symbol-defs.svg#icon-antenna">
                                 </use>
                             </svg>
                         </div>
-                        <h3 class="featers-title">Внимание к деталям</h3>
-                        <p class="featers-decription">Идейные соображения,
+                        <h3 class="featers__title">Внимание к деталям</h3>
+                        <p class="featers__decription">Идейные соображения,
                             а также начало повседневной работы
                             по формированию позиции.</p>
                     </li>
-                    <li class="featers-li">
-                        <div class="place-featers">
-                            <svg class="featers-svg" width="67px" height="70px">
+                    <li class="featers__item">
+                        <div class="featers__place">
+                            <svg class="featers__image" width="67px" height="70px">
                                 <use href="./images/symbol-defs.svg#icon-clock">
                                 </use>
                             </svg>
                         </div>
-                        <h3 class="featers-title">Пунктуальность</h3>
-                        <p class="featers-decription">Задача организации,
+                        <h3 class="featers__title">Пунктуальность</h3>
+                        <p class="featers__decription">Задача организации,
                             в особенности же рамки
                             и место обучения кадров влечет за собой.</p>
                     </li>
-                    <li class="featers-li">
-                        <div class="place-featers">
-                            <svg class="featers-svg" width="70px" height="54px">
+                    <li class="featers__item">
+                        <div class="featers__place">
+                            <svg class="featers__image" width="70px" height="54px">
                                 <use href="./images/symbol-defs.svg#icon-vector">
                                 </use>
                             </svg>
                         </div>
-                        <h3 class="featers-title">Планирование</h3>
-                        <p class="featers-decription">Равным образом консультация с широким
+                        <h3 class="featers__title">Планирование</h3>
+                        <p class="featers__decription">Равным образом консультация с широким
                             активом в значительной степени обуславливает.</p>
                     </li>
-                    <li class="featers-li">
-                        <div class="place-featers">
-                            <svg class="featers-svg" width="55px" height="61px">
+                    <li class="featers__item">
+                        <div class="featers__place">
+                            <svg class="featers__image" width="55px" height="61px">
                                 <use href="./images/symbol-defs.svg#icon-astro">
                                 </use>
                             </svg>
                         </div>
-                        <h3 class="featers-title">Современные технологии</h3>
-                        <p class="featers-decription">Значимость этих проблем настолько очевидна,
+                        <h3 class="featers__title">Современные технологии</h3>
+                        <p class="featers__decription">Значимость этих проблем настолько очевидна,
                             что реализация плановых заданий.</p>
                     </li>
                 </ul>
@@ -113,15 +115,17 @@
             <div class="container">
                 <h2 class="section-title">Чем мы занимаемся</h2>
                 <ul class="works-list list">
-                    <li class="works-li">
-                        <img class="works-img" src="./images/verstsq.jpg" alt="Десктопные приложения" width="370">
-                        <h3 class="works-title">Десктопные приложения</h3>
+                    <li class="works__item">
+                        <img class="works__image" src="./images/verstsq.jpg" alt="Десктопные приложения" width="370">
+                        <h3 class="works__title">Десктопные приложения</h3>
                     </li>
-                    <li class="works-li"><img class="works-img" src="./images/imgrazmsq.jpg" alt="Мобильные приложения" width="370">
-                        <h3 class="works-title">Мобильные приложения</h3>
+                    <li class="works__item">
+                        <img class="works__image" src="./images/imgrazmsq.jpg" alt="Мобильные приложения" width="370">
+                        <h3 class="works__title">Мобильные приложения</h3>
                     </li>
-                    <li class="works-li"><img class="works-img" src="./images/imgpalitrsq.jpg" alt="Дизайнерские решения" width="370">
-                        <h3 class="works-title">Дизайнерские решения</h3>
+                    <li class="works__item">
+                        <img class="works__image" src="./images/imgpalitrsq.jpg" alt="Дизайнерские решения" width="370">
+                        <h3 class="works__title">Дизайнерские решения</h3>
                     </li>
                 </ul>
             </div>
@@ -131,140 +135,140 @@
             <div class="container">
                 <h2 class="section-title">Наша команда</h2>
                 <ul class="team list">
-                    <li class="team-li">
+                    <li class="team__item">
                         <img src="./images/imgigdemsq.jpg" alt="Игорь Демьяненко" width="270">
-                        <h3 class="team-title">Игорь Демьяненко</h3>
-                        <p class="team-decription" lang="en">Product Designer</p>
-                        <ul class="sotsset-team list">
-                           <li class="sots-li">
-                                    <a href="" class="button-sots">
-                                    <svg class="button-icon">
+                        <h3 class="team__title">Игорь Демьяненко</h3>
+                        <p class="team__decription" lang="en">Product Designer</p>
+                        <ul class="sots list">
+                           <li class="sots__item">
+                                    <a href="" class="sots__link">
+                                    <svg class="sots__icon">
                                         <use href="./images/symbol-defs.svg#icon-instagram"></use>
                                     </svg>
                                     </a>                                                       
                            </li> 
-                           <li class="sots-li">
-                                <a href="" class="button-sots">
-                                    <svg class="button-icon">
+                           <li class="sots__item">
+                                <a href="" class="sots__link">
+                                    <svg class="sots__icon">
                                         <use href="./images/symbol-defs.svg#icon-twitter"></use>
                                     </svg>
                                 </a>                                
                            </li>
-                           <li class="sots-li">
-                               <a href="" class="button-sots">
-                                 <svg class="button-icon">
+                           <li class="sots__item">
+                               <a href="" class="sots__link">
+                                 <svg class="sots__icon">
                                     <use href="./images/symbol-defs.svg#icon-facebook"></use>
                                 </svg>
                                 </a>                                
                            </li>
-                           <li class="sots-li">
-                               <a href="" class="button-sots">
-                                    <svg class="button-icon">
+                           <li class="sots__item">
+                               <a href="" class="sots__link">
+                                    <svg class="sots__icon">
                                         <use href="./images/symbol-defs.svg#icon-twitter"></use>
                                     </svg>
                                 </a>                                
                            </li>
                         </ul>
                     </li>
-                    <li class="team-li">
+                    <li class="team__item">
                         <img src="./images/imgolrepsq.jpg" alt="Ольга Репина" width="270">
-                        <h3 class="team-title">Ольга Репина</h3>
-                        <p class="team-decription" lang="en">Frontend Developer</p>
-                        <ul class="sotsset-team list">
-                            <li class="sots-li">
-                                <a href="" class="button-sots">
-                                    <svg class="button-icon">
+                        <h3 class="team__title">Ольга Репина</h3>
+                        <p class="team__decription" lang="en">Frontend Developer</p>
+                        <ul class="sots list">
+                            <li class="sots__item">
+                                <a href="" class="sots__link">
+                                    <svg class="sots__icon">
                                         <use href="./images/symbol-defs.svg#icon-instagram"></use>
                                     </svg>
                                 </a>
                             </li>
-                            <li class="sots-icon">
-                                <a href="" class="button-sots">
-                                    <svg class="button-icon">
+                            <li class="sots__item">
+                                <a href="" class="sots__link">
+                                    <svg class="sots__icon">
                                         <use href="./images/symbol-defs.svg#icon-twitter"></use>
                                     </svg>
                                 </a>
                             </li>
-                            <li class="sots-icon">
-                                <a href="" class="button-sots">
-                                    <svg class="button-icon">
+                            <li class="sots__item">
+                                <a href="" class="sots__link">
+                                    <svg class="sots__icon">
                                         <use href="./images/symbol-defs.svg#icon-facebook"></use>
                                     </svg>
                                 </a>
                             </li>
-                            <li class="sots-icon">
-                                <a href="" class="button-sots">
-                                    <svg class="button-icon">
+                            <li class="sots__item">
+                                <a href="" class="sots__link">
+                                    <svg class="sots__icon">
                                         <use href="./images/symbol-defs.svg#icon-twitter"></use>
                                     </svg>
                                 </a>
                             </li>
                         </ul>
                     </li>
-                    <li class="team-li">
+                    <li class="team__item">
                         <img src="./images/imgniktarsq.jpg" alt="Николай Тарасов" width="270">
-                        <h3 class="team-title">Николай Тарасов</h3>
-                        <p class="team-decription" lang="en">Marketing</p>
-                        <ul class="sotsset-team list">
-                            <li class="sots-li">
-                                <a href="" class="button-sots">
-                                    <svg class="button-icon">
+                        <h3 class="team__title">Николай Тарасов</h3>
+                        <p class="team__decription" lang="en">Marketing</p>
+                        <ul class="sots list">
+                            <li class="sots__item">
+                                <a href="" class="sots__link">
+                                    <svg class="sots__icon">
                                         <use href="./images/symbol-defs.svg#icon-instagram"></use>
                                     </svg>
                                 </a>
                             </li>
-                            <li class="sots-icon">
-                                <a href="" class="button-sots">
-                                    <svg class="button-icon">
+                            <li class="sots__item">
+                                <a href="" class="sots__link">
+                                    <svg class="sots__icon">
                                         <use href="./images/symbol-defs.svg#icon-twitter"></use>
                                     </svg>
                                 </a>
                             </li>
-                            <li class="sots-icon">
-                                <a href="" class="button-sots">
-                                    <svg class="button-icon">
+                            <li class="sots__item">
+                                <a href="" class="sots__link">
+                                    <svg class="sots__icon">
                                         <use href="./images/symbol-defs.svg#icon-facebook"></use>
                                     </svg>
                                 </a>
                             </li>
-                            <li class="sots-icon">
-                                <a href="" class="button-sots">
-                                    <svg class="button-icon">
+                            <li class="sots__item">
+                                <a href="" class="sots__link">
+                                    <svg class="sots__icon">
                                         <use href="./images/symbol-defs.svg#icon-twitter"></use>
                                     </svg>
                                 </a>
                             </li>
                         </ul>
                     </li>
-                    <li class="team-li">
+                    <li class="team__item">
                         <img src="./images/imgmiersq.jpg" alt="Михаил Ермаков" width="270">
-                        <h3 class="team-title">Михаил Ермаков</h3>
-                        <p class="team-decription" lang="en">UI Designer</p>
-                        <ul class="sotsset-team list">
-                            <li class="sots-li">
-                                <a href="" class="button-sots">
-                                    <svg class="button-icon">
+                        <h3 class="team__title">Михаил Ермаков</h3>
+                        <p class="team__decription" lang="en">UI Designer</p>
+                        <ul class="sots list">
+                            <li class="sots__item">
+                                <a href="" class="sots__link">
+                                    <svg class="sots__icon">
                                         <use href="./images/symbol-defs.svg#icon-instagram"></use>
                                     </svg>
                                 </a>
                             </li>
-                            <li class="sots-icon">
-                                <a href="" class="button-sots">
-                                    <svg class="button-icon">
+                            <li class="sots__item">
+                                <a href="" class="sots__link">
+                                    <svg class="sots__icon">
                                         <use href="./images/symbol-defs.svg#icon-twitter"></use>
                                     </svg>
                                 </a>
                             </li>
-                            <li class="sots-icon">
-                                <a href="" class="button-sots">
-                                    <svg class="button-icon">
+                            <li class="sots__item">
+                                <a href="" class="sots__link">
+                                    <svg class="sots__icon">
                                         <use href="./images/symbol-defs.svg#icon-facebook"></use>
                                     </svg>
                                 </a>
                             </li>
-                            <li class="sots-icon">
-                                <a href="" class="button-sots">
-                                    <svg class="button-icon">
+                            <li class="sots__item">
+                                <a href="" class="sots__link">
+                                    <svg class="sots__icon">
                                         <use href="./images/symbol-defs.svg#icon-twitter"></use>
                                     </svg>
                                 </a>
@@ -274,48 +278,49 @@
                 </ul>
             </div>                     
         </section>
+        <!--Розмічаємо секцію постійних клієнтів-->
         <section class="section">
             <div class="container">
                 <h2 class="section-title">Постоянные клиенты</h2>
                 <ul class="clients list">
-                    <li class="clients-li">
-                        <div class="clients-place">
-                            <svg class="clients-icon">
+                    <li class="clients__item">
+                        <div class="clients__place">
+                            <svg class="clients__icon">
                                 <use href="./images/symbol-defs.svg#icon-logo1"></use>
                             </svg>
                         </div>
                     </li>
-                    <li class="clients-li">
-                        <div class="clients-place">
-                            <svg class="clients-icon">
+                    <li class="clients__item">
+                        <div class="clients__place">
+                            <svg class="clients__icon">
                                 <use href="./images/symbol-defs.svg#icon-logo2"></use>
                             </svg>
                         </div>
                     </li>
-                    <li class="clients-li">
-                        <div class="clients-place">
-                            <svg class="clients-icon">
+                    <li class="clients__item">
+                        <div class="clients__place">
+                            <svg class="clients__icon">
                                 <use href="./images/symbol-defs.svg#icon-logo3"></use>
                             </svg>
                         </div>
                     </li>
-                    <li class="clients-li">
-                        <div class="clients-place">
-                            <svg class="clients-icon">
+                    <li class="clients__item">
+                        <div class="clients__place">
+                            <svg class="clients__icon">
                                 <use href="./images/symbol-defs.svg#icon-logo4"></use>
                             </svg>
                         </div>
                     </li>
-                    <li class="clients-li">
-                        <div class="clients-place">
-                            <svg class="clients-icon">
+                    <li class="clients__item">
+                        <div class="clients__place">
+                            <svg class="clients__icon">
                                 <use href="./images/symbol-defs.svg#icon-logo5"></use>
                             </svg>
                         </div>
                     </li>
-                    <li class="clients-li">
-                        <div class="clients-place">
-                            <svg class="clients-icon">
+                    <li class="clients__item">
+                        <div class="clients__place">
+                            <svg class="clients__icon">
                                 <use href="./images/symbol-defs.svg#icon-logo6"></use>
                             </svg>
                         </div>
@@ -328,8 +333,9 @@
     <!--Закінчили з осноновною частиною, переходимо до футера-->
     <footer class="footer">
         <div class="container footer">
+            <!--Розмічаємо адрес в футері-->
             <div>
-                <a href="./index.html" class="logotextfoot link"><span class="logo">Web</span>Studio</a>
+                <a href="./index.html" class="logotext logotext--foot link"><span class="logo">Web</span>Studio</a>
                 <address>
                     <ul class="footer-nav list">
                         <li><a href="https://goo.gl/maps/u381TuipqdCtVo7J7" class="link" target="_blank" rel="noopener noreferrer">г.
@@ -340,6 +346,7 @@
                     </ul>
                 </address>
             </div>
+            <!--Додаємо ссилки на соцмережі в футері-->
             <div class="footer-sots">
                 <h2 class="foot-title">Присоеденяйтесь</h2>
                 <ul class="sotsset-footer list">
@@ -348,8 +355,7 @@
                             <svg class="button-icon">
                                 <use href="./images/symbol-defs.svg#icon-instagram"></use>
                             </svg>
-                        </a>
-                
+                        </a>                
                     </li>
                     <li class="sots-li-foot">
                         <a href=""  class="button-foot-sots">
@@ -376,6 +382,7 @@
                     </li>
                 </ul>
             </div>
+            <!--Додаємо форму на підписку в футері-->
             <div class="foot-form-client">
                 <b class="invitation">Подпишитесь на рассылку</b>
                 <form class="foot-form" name="email">
@@ -391,7 +398,7 @@
         </div>
     </footer>
     <!-- Додаємо модальне вікно -->
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button class="modal-button" type="button" data-modal-close>
                 <svg class="close-icon">

@@ -7,6 +7,7 @@
 /* #F5F4FA - трохи сіріший білий background колір сторінки */
 /* rgba(255, 255, 255, 0.6) - колір ссилок футера */
 /* Задаю колір сторінки сайту та основний колір тексту */
+
 :root {
     --general-text-color: #757575;
     --title-text-color: #212121;
@@ -52,7 +53,7 @@ body {
 .link {
     text-decoration: none;
 }
-.header-clss{ 
+.header{ 
     display: flex;
     border-bottom: 1px solid #ECECEC  
     
@@ -64,6 +65,12 @@ body {
     width: 1200px;
     /* outline: 2px solid teal;  */
 }
+.head-container {
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    align-items: center;
+}
 /* Задаю колір передньої частини логотипу */
 .logo {
     color: var(--accent-color);
@@ -71,19 +78,16 @@ body {
 
 /* задаю колір другої частини тексту лого */
 .logotext {
-    color: var(--title-text-color);
-
     font-family: raleway, sans-serif;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.2;
 }
-.head-container {    
-    margin-top: auto;
-    margin-bottom: auto;
-    display: flex;
-    align-items: center;
-       
+.logotext--head {
+    color: var(--title-text-color);
+}
+.logotext--foot{
+    color: var(--second-text-color);
 }
 .header-nav {
     display: flex;
@@ -96,17 +100,6 @@ body {
     align-items: center;
     margin-left: 93px;
 }
-/* Задаю колір та шрифт ссилок в блоці навігації */
-/* .site-nav .link {
-    display: flex;
-    color: var(--title-text-color);
-    
-
-    font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-} */
 /* задаю колір та шрифт ссилок в блоці навігації при наваденні та переході */
 .site-nav .link:hover,
 .site-nav .link:focus {
@@ -115,6 +108,11 @@ body {
 .site-nav .link.current {
     color: var(--accent-color);
     position: relative;
+}
+.site-nav__item {}
+
+.site-nav__item:not(:last-child) {
+    margin-right: 50px;
 }
 .nav-info.current::after{
     position: absolute;
@@ -130,7 +128,7 @@ body {
     border-radius: 2px;
     
 }
-.nav-info{
+.site-nav__link{
     display: flex;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -143,25 +141,22 @@ body {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.li-nav:not(:last-child){
-    margin-right: 50px;
-}
 .contact-nav {
     display: flex;
     margin-left: auto;
 }
-.contact-li{
+.contact__item{
     display: flex;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.contact-li + .contact-li {
+.contact__item + .contact__item {
     margin-left: 50px;
 }
-.link-cont {
+.contact__link {
     display: flex;
     align-items: center;
 }
-.contact-li:hover{
+.contact__item:hover{
     color: var(--accent-color);
 }
 .mylo-icon {
@@ -201,7 +196,7 @@ body {
 .contact-nav .link:focus {
     color: var(--accent-color);    
 } 
-/* задаю колір та шрифт заголовків */
+
 /* Задаю колір та шрифт головного заголовка */
 .section.hero {
     margin-left: auto;
@@ -223,10 +218,8 @@ body {
 }
 .hero-title {
     width: 696px;
-    margin: 0px auto 40px auto;
-    
-    /* margin-bottom: 40px; */
-       
+    margin: 0px auto 40px auto;    
+          
     color: var(--second-text-color);
 
     font-weight: 900;
@@ -240,13 +233,8 @@ body {
 .section {
     padding-top: 94px;
     padding-bottom: 94px;   
-    /* outline: 2px dashed rebeccapurple;  */
+   
 }
-.section.works{
-    padding-top: 0;
-}
-
-
 /* задаю колір та шрифт заголовків секції */
 .section-title {
     margin-top: 0;
@@ -262,7 +250,7 @@ body {
 .featers {
     display: flex;
 }
-.place-featers{
+.featers__place{
     display: flex;
     text-align: center;
     justify-content: center;
@@ -273,81 +261,50 @@ body {
     margin-bottom: 30px;
 }
 /* Задаю ширину лішкам списку featers */
-.featers-li {
+.featers__item {
     width: 270px;
 }
 /* Задаю маржини лішкам списку featers крім останнього */
-.featers-li:not(:last-child){
+.featers__item:not(:last-child){
     margin-right: 30px;
 }
 /* задаю колір та шрифт h3 в секції featers */
-.featers-title {
+.featers__title {
     margin-top: 0;
     margin-bottom: 10px;
     
     color: var(--title-text-color);
 
-    /* font-weight: 700; */
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
 }
-/* .featers .title { 
-    color: var(--title-text-color);*/
-
-    /* font-weight: 700; */
-    /* font-size: 14px; 
-    line-height: 1.14;
-    text-transform: uppercase;
-}*/
 /* задаю колір та шрифт основного тексту в секції featers */
-.featers-decription {
+.featers__decription {
     display: inline-block;    
     line-height: 1.71;
 }
-.button-sots{  
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    padding: 0;
-    border: none;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    color: var(--sotsset-color);
 
-   
-    
-  }
-.button-sots:hover{
-    color: var(--second-text-color);
-    background-color: var(--accent-color);
-}
-.button-icon{
-    display: flex;
-    width: 20px;
-    height: 20px;
+/* ------------Секція робіт----------------- */
+ .section.works {
+     padding-top: 0;
+ }
 
-    fill: currentColor;
-    
-}
-/* задаю колір та шрифт основного тексту в секції team */
-    
+ .works {}
 
 .works-list {
     display: flex;
 }
-.works-li{
+.works__item{
     position: relative;
 }
-.works-li:not(:last-child) {
+.works__item:not(:last-child) {
     margin-right: 30px;
 }
-.works-img {
+.works__image {
     display: block;
 }
-.works-title{
+.works__title{
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -363,13 +320,14 @@ body {
     color: var(--second-text-color);
     background: rgba(47, 48, 58, 0.8);
 }
+/* ------------Секція команди---------------- */
 .team.section {
 background-color: var(--bgc-button-color);
 }
 .team {
     display: flex;
 }
-.team-title {
+.team__title {
     margin-top: 0;
     margin-bottom: 10px;
     color: var(--title-text-color);
@@ -381,22 +339,22 @@ background-color: var(--bgc-button-color);
     
     text-align: center;
 }
-.team-li {
+.team__item {
     width: 270px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
     background-color: var(--second-text-color);
 }
-.team-li + .team-li {
+.team__item + .team__item {
     margin-left: 30px;;
 }
-.team-decription {
+.team__decription {
     font-size: 16px;
     line-height: 1.2;    
     
     text-align: center;
 }
-.sotsset-team{
+.sots{
     display: flex;
     padding: 0;
     margin: 16px 32px 30px 32px;
@@ -405,49 +363,54 @@ background-color: var(--bgc-button-color);
     justify-content: space-between;
     align-items: center;
 }
-.sots-li{
+.sots__item{
     display: flex;
     align-items: center;
     justify-content: center;
    
    
 }
-
-.button-sots{  
+.sots__link {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     padding: 0;
     border: none;
     width: 44px;
     height: 44px;
     border-radius: 50%;
     color: var(--sotsset-color);
+    color: var(--sotsset-color);
     background-color: var(--second-text-color);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
-  }
-.button-sots:hover{
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sots__link:hover {
     color: var(--second-text-color);
     background-color: var(--accent-color);
 }
-.button-icon{
+
+.sots__icon {
     display: flex;
     width: 20px;
     height: 20px;
 
     fill: currentColor;
-    
-    
+
 }
+/*-------Розмічаємо секцію постійних клієнтів-------- */
 .clients{
     display: flex;
 }
-.clients-li + .clients-li{
+.clients__item{
+
+}
+.clients__item + .clients__item{
     margin-left: 30px;
 }
-.clients-place {
+.clients__place {
     display: flex;
     width: 170px;
     height: 92px;
@@ -460,12 +423,12 @@ background-color: var(--bgc-button-color);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
                 border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.clients-place:hover {
+.clients__place:hover {
     color: var(--accent-color);
     border-color: var(--accent-color);
 
 }
-.clients-icon{
+.clients__icon{
     fill: currentColor;
     margin: 16px 32px 16px 32px;
 }
@@ -561,14 +524,6 @@ background-color: var(--bgc-button-color);
       
     color: var(--second-text-color);
     background: rgba(33, 150, 243, 0.9);
-}
-/* задаю колір та шрифт логотипу в футері */
-.logotextfoot {
-    color: var(--second-text-color);
-    font-family: raleway, sans-serif;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.2;
 }
 .footer {    
     padding-top: 60px;

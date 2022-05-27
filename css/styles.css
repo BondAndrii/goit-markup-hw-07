@@ -357,18 +357,25 @@ background-color: var(--bgc-button-color);
 .sots{
     display: flex;
     padding: 0;
-    margin: 16px 32px 30px 32px;
-    /* outline: 1px solid rebeccapurple; */
-    list-style: none;
-    justify-content: space-between;
+     
+    list-style: none;    
     align-items: center;
+}
+.sots--team{
+    justify-content: space-between;
+    margin: 16px 32px 30px 32px;
+}
+.sots--footer{
+    margin-top: 20px;
 }
 .sots__item{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
    
-   
+}
+.sots__item--foot{
+
 }
 .sots__link {
     display: flex;
@@ -380,11 +387,18 @@ background-color: var(--bgc-button-color);
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    color: var(--sotsset-color);
+   
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.sots__link--team {
     color: var(--sotsset-color);
     background-color: var(--second-text-color);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+.sots__link--foot{
+    color: var(--second-text-color);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .sots__link:hover {
@@ -550,32 +564,11 @@ background-color: var(--bgc-button-color);
     
     color: var(--second-text-color);
 }
-.sotsset-footer{    
-    display: flex;
-    margin-top: 20px;       
-}
 
-.sots-li-foot + .sots-li-foot{
+.sots__item--foot + .sots__item--foot{
     margin-left: 10px;
 }
-.button-foot-sots{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    padding: 0;
-    border: none;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    color: var(--second-text-color);
-    background-color: rgba(255, 255, 255, 0.1);
 
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.button-foot-sots:hover {
-    background-color: var(--accent-color);
-}
 /* задаю колір тексту футера */
 .footer-nav .link {
     color: var(--second-text-color);    

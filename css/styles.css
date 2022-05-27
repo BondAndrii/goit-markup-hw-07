@@ -447,30 +447,28 @@ background-color: var(--bgc-button-color);
     margin: 16px 32px 16px 32px;
 }
 
-.portfolio-header {
-    margin-bottom: 94px;
-}
 .filter {
     display: flex;
     margin-bottom: 50px;
     justify-content: center;
 }
-.filter-li{
+.filter__item{
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.filter-li + .filter-li {
+.filter__item + .filter__item {
     margin-left: 8px;
 }
-.filter-li:hover, .filter-li:focus{
+.filter__item:hover, .filter__item:focus{
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
+/* ------------Секція прикладів-------------------------- */
 .example {
     display: flex;
     flex-wrap: wrap;
     
 }
 /* Задаю колір заголовків h3 в секції приклади */
-.example-title {
+.card__title {
     margin-top: 0;
     margin-bottom: 4px;
     color: var(--title-text-color);
@@ -481,7 +479,7 @@ background-color: var(--bgc-button-color);
     letter-spacing: 0.06em;
 }
 
-.example-li { 
+.example__item { 
     display: flex;
     flex-direction: column;
     width: 370px;
@@ -491,38 +489,39 @@ background-color: var(--bgc-button-color);
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
-.example-li:hover{
+.example__item:hover{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-.example-li:hover .movie-window{
+.example__item:hover .card__overlay{
     transform: translateY(0);
 
 }
-.example-li:nth-child(3n){ 
+.example__item:nth-child(3n){ 
     margin-right: 0;
 }
-.example-li:nth-last-child(-n+3){
+.example__item:nth-last-child(-n+3){
     margin-bottom: 0;
 }
 .exemple-decription {   
     font-size: 16px;
     line-height: 1.88;
 }
-/*  не пушаться зміни, якась містика */
-.exemple-img {
+
+.card{
+    position: relative;
+    overflow: hidden;
+}
+.card__image{
     display: block;
     
 }
 /* обгортаю текст під картинкою */
-.example-legend {
+.card__meta {
     padding: 20px 24px;
     border: 1px solid #EEEEEE;
 }
-.example-top-wrap{
-    position: relative;
-    overflow: hidden;
-}
-.movie-window{
+
+.card__overlay{
     position: absolute;
     top:0;
     transform: translateY(100%);
@@ -548,6 +547,24 @@ background-color: var(--bgc-button-color);
 .container.footer{
     display: flex;
     align-items: baseline;
+}
+.footer-nav .link {
+    color: var(--second-text-color);
+
+    font-style: normal;
+    line-height: 1.71;
+}
+
+/* задаю колір контактів в футері */
+.footer-nav .contact {
+    color: var(--footer-second-text-color);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-nav .contact:hover,
+.footer-nav .contact:focus {
+    color: var(--accent-color);
 }
 .footer-sots{
     margin-left: 70px;
@@ -724,7 +741,7 @@ background-color: var(--bgc-button-color);
       
 }
 
-.modal-button{
+.close__button{
     position: absolute;
     display: flex;
     top: 8px;
@@ -738,10 +755,10 @@ background-color: var(--bgc-button-color);
     
     
 }
-.modal-button:hover .close-icon, .modal-button:focus .close-icon {
+.close__button:hover .close__icon, .close__button:focus .close__icon {
     fill: var(--accent-color);
 }
-.close-icon{
+.close__icon{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -750,7 +767,7 @@ background-color: var(--bgc-button-color);
     height: 11px;   
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-title{
+.modal__title{
     display: block;
     margin-bottom: 12px;
     font-style: normal;
@@ -761,7 +778,7 @@ background-color: var(--bgc-button-color);
     
     color: var(--title-text-color);
 }
-.modal-form-in{
+.form__place{
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
@@ -772,14 +789,14 @@ background-color: var(--bgc-button-color);
     flex-direction: column;
    
 }*/
-.modal-label{    
+.modal__label{    
     margin-bottom: 4px;
     font-size: 12px;
     line-height: 1.167;    
     letter-spacing: 0.01em;    
     color:var(--general-text-color);
 }
-.modal-input{
+.modal__input{
     width: 100%;
     height: 40px;
     padding: 12px 12px 12px 42px;
@@ -788,20 +805,20 @@ background-color: var(--bgc-button-color);
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     outline: none;
 }
-.div-svg-input{
+.label__place{
     position: relative;
 }
-.modal-input:hover, .modal-textarea:hover {
+.modal__input:hover, .modal__textarea:hover {
     border-color: var(--accent-color);
 }
-.modal-input:focus,
+.modal__input:focus,
 .modal-textarea:focus {
     border-color: var(--accent-color);
 }
-.modal-input:active, .modal-textarea:active {
+.modal__input:active, .modal-textarea:active {
     border-color: var(--accent-color);
 }
-.label-checkbox{ 
+.label__checkbox{ 
     position: relative;
     display: flex;
     align-items: center;
@@ -813,22 +830,22 @@ background-color: var(--bgc-button-color);
 .doc{
     color: var(--accent-color);
 }
-.modal-input:hover + .input-icon{
+.modal__input:hover +.input__icon{
     fill:var(--accent-color);
 }
-.modal-input:focus +.input-icon {
+.modal__input:focus +.input__icon{
     fill: var(--accent-color);
 }
-.modal-input:active +.input-icon {
+.modal__input:active +.input__icon{
     fill: var(--accent-color);
 }
-.input-icon{
+.input__icon{
     position: absolute;   
     left: 15px;
     bottom: 14px;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-textarea{
+.modal__textarea{
     padding: 12px 16px;
     resize: none;
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -836,31 +853,31 @@ background-color: var(--bgc-button-color);
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     outline: none;
 }
-.modal-checkbox{
+.modal__checkbox{
     display: flex;
     margin: 20px 51px 30px 52px;
     display: flex;
     align-items: center;
 }
 /* .input-checkbox{} */
-.input-checkbox:checked + .label-checkbox .checkbox-place{
+.input__checkbox:checked + .label__checkbox .checkbox__area{
     background-color:var(--accent-color); 
     border: none;
     
 }
-.input-checkbox:checked+.label-checkbox .checkbox-icon{
+.input__checkbox:checked+.label__checkbox .checkbox__icon{
     fill: var(--second-text-color);
 }
-.checkbox-place{
+.checkbox__area{
     position: absolute;
     left: -25px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.checkbox-icon{
+.checkbox__icon{
     fill: transparent;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.label-checkbox .checkbox-place {
+.label__checkbox .checkbox__area {
     width: 16px;
     height: 15px;
     border: 2px solid var(--title-text-color);
@@ -871,7 +888,7 @@ background-color: var(--bgc-button-color);
     align-items: center;
     justify-content: center;
 }
-.modal-form-button{
+.modal__button{
     width: 200px;
     height: 50px;
     border: none;

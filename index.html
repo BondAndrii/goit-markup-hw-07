@@ -400,50 +400,50 @@
     <!-- Додаємо модальне вікно -->
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <button class="modal-button" type="button" data-modal-close>
-                <svg class="close-icon">
+            <button class="close__button" type="button" data-modal-close>
+                <svg class="close__icon">
                     <use class="close" href="./images/symbol-defs.svg#icon-vectorclose" width="11px" height="11px"></use>
                 </svg>
             </button>
             <form name="modal-form">
-                <b class="modal-title">Оставьте свои данные, мы Вам перезвоним</b>
-                <div class="modal-form-in">
-                    <label class="modal-label" for="name">Имя</label>
-                    <div class="div-svg-input">
-                        <input class="modal-input" type="text" name="name" id="name">
-                        <svg class="input-icon" width="12" height="12">
+                <b class="modal__title">Оставьте свои данные, мы Вам перезвоним</b>
+                <div class="form__place">
+                    <label class="modal__label" for="name">Имя</label>
+                    <div class="label__place">
+                        <input class="modal__input" type="text" name="name" id="name">
+                        <svg class="input__icon" width="12" height="12">
                             <use href="./images/symbol-defs.svg#icon-name"></use>
                         </svg>                        
                     </div>                    
                 </div>
-                <div class="modal-form-in">
-                    <label class="modal-label" for="tel">Телефон</label>
-                    <div class="div-svg-input">
-                        <input class="modal-input" type="tel" name="tel" id="tel">
-                        <svg class="input-icon" width="13" height="13">
+                <div class="form__place">
+                    <label class="modal__labell" for="tel">Телефон</label>
+                    <div class="label__place">
+                        <input class="modal__input" type="tel" name="tel" id="tel">
+                        <svg class="input__icon" width="13" height="13">
                             <use href="./images/symbol-defs.svg#icon-phon"></use>
                         </svg>
                         
                     </div>
                 </div>
-                <div class="modal-form-in">
-                    <label class="modal-label" for="mail">Почта</label>
-                    <div class="div-svg-input">
-                        <input class="modal-input" type="email" name="email" id="mail">
-                        <svg class="input-icon" width="15" height="12">
+                <div class="form__place">
+                    <label class="modal__label" for="mail">Почта</label>
+                    <div class="label__place">
+                        <input class="modal__input" type="email" name="email" id="mail">
+                        <svg class="input__icon" width="15" height="12">
                             <use href="./images/symbol-defs.svg#icon-lett"></use>
                         </svg>                        
                     </div>
                 </div>
-                <div class="modal-form-in">
-                    <label class="modal-label" for="comment">Коментарий</label>
-                    <textarea class="modal-textarea" name="comment" id="comment" rows="10" placeholder="введите текст"></textarea>
+                <div class="form__place">
+                    <label class="modal__label" for="comment">Коментарий</label>
+                    <textarea class="modal__textarea" name="comment" id="comment" rows="10" placeholder="введите текст"></textarea>
                 </div>                
-                <div class="modal-checkbox">
-                    <input class="input-checkbox" type="checkbox" name="agree" value="yes" id="agree">
-                    <label class="label-checkbox" for="agree">
-                        <span class="checkbox-place">
-                            <svg class="checkbox-icon" width="16" height="15">
+                <div class="modal__checkbox">
+                    <input class="input__checkbox" type="checkbox" name="agree" value="yes" id="agree">
+                    <label class="label__checkbox" for="agree">
+                        <span class="checkbox__area">
+                            <svg class="checkbox__icon" width="16" height="15">
                                 <use href="./images/symbol-defs.svg#icon-galochka"></use>
                             </svg>
                         </span>
@@ -451,7 +451,7 @@
                         <a class="doc" href="">Условия соглашения</a>
                     </label>
                 </div>
-                <button class="modal-form-button" type="submit">Отправить</button>
+                <button class="modal__button" type="submit">Отправить</button>
             </form>        
         </div>
     </div>

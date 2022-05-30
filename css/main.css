@@ -84,9 +84,9 @@ a {
   display: flex;
   align-items: center;
   margin-left: 93px;
+  /* задаю колір та шрифт ссилок в блоці навігації при наваденні та переході */
 }
 
-/* задаю колір та шрифт ссилок в блоці навігації при наваденні та переході */
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--accent-color);
@@ -99,6 +99,17 @@ a {
 
 .site-nav__item:not(:last-child) {
   margin-right: 50px;
+}
+
+.site-nav__link {
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: var(--title-text-color);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav__link.current::after {
@@ -114,25 +125,34 @@ a {
   border-radius: 2px;
 }
 
-.site-nav__link {
+.contact-nav {
   display: flex;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  color: var(--title-text-color);
+  margin-left: auto;
+  /* Задаю колір та шрифт ссилок в блоці авторизації */
+  /* задаю колір та шрифт ссилок в блоці авторизації при наваденні та переході */
+}
+
+.contact-nav .link {
+  color: var(--general-text-color);
   font-weight: 500;
-  line-height: 1.14;
+  font-size: var(--main-font);
+  line-height: 1.143;
   letter-spacing: 0.02em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact-nav {
-  display: flex;
-  margin-left: auto;
+.contact-nav .link:hover,
+.contact-nav .link:focus {
+  color: var(--accent-color);
 }
 
 .contact__item {
   display: flex;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact__item:hover {
+  color: var(--accent-color);
 }
 
 .contact__item + .contact__item {
@@ -142,10 +162,6 @@ a {
 .contact__link {
   display: flex;
   align-items: center;
-}
-
-.contact__item:hover {
-  color: var(--accent-color);
 }
 
 .mylo-icon {
@@ -167,22 +183,6 @@ a {
   height: 16px;
   width: 10px;
   fill: currentColor;
-}
-
-/* Задаю колір та шрифт ссилок в блоці авторизації */
-.contact-nav .link {
-  color: var(--general-text-color);
-  font-weight: 500;
-  font-size: var(--main-font);
-  line-height: 1.143;
-  letter-spacing: 0.02em;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* задаю колір та шрифт ссилок в блоці авторизації при наваденні та переході */
-.contact-nav .link:hover,
-.contact-nav .link:focus {
-  color: var(--accent-color);
 }
 
 /* Задаю колір передньої частини логотипу */
@@ -270,9 +270,9 @@ a {
 /* Задаю ширину лішкам списку featers */
 .featers__item {
   width: 270px;
+  /* Задаю маржини лішкам списку featers крім останнього */
 }
 
-/* Задаю маржини лішкам списку featers крім останнього */
 .featers__item:not(:last-child) {
   margin-right: 30px;
 }
@@ -468,13 +468,12 @@ a {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.filter__item + .filter__item {
-  margin-left: 8px;
+.filter__item:hover, .filter__item:focus {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.filter__item:hover,
-.filter__item:focus {
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+.filter__item + .filter__item {
+  margin-left: 8px;
 }
 
 /* ------------Секція прикладів-------------------------- */
@@ -577,8 +576,7 @@ a {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-nav .contact:hover,
-.footer-nav .contact:focus {
+.footer-nav .contact:hover, .footer-nav .contact:focus {
   color: var(--accent-color);
 }
 

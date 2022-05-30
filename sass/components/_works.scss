@@ -11,12 +11,10 @@
 
 .works__item {
     position: relative;
+    &:not(:last-child) {
+            margin-right: 30px;
+        }
 }
-
-.works__item:not(:last-child) {
-    margin-right: 30px;
-}
-
 .works__image {
     display: block;
 }

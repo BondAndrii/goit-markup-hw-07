@@ -9,12 +9,11 @@
     font-weight: 700;
     font-size: 26px;
     line-height: 1.2;
+    &--head {
+            color: var(--title-text-color);
+        }    
+    &--foot {
+            color: var(--second-text-color);
+        }
 }
 
-.logotext--head {
-    color: var(--title-text-color);
-}
-
-.logotext--foot {
-    color: var(--second-text-color);
-}

@@ -846,12 +846,12 @@ a {
   align-items: center;
 }
 
-.input-checkbox:checked + .label__checkbox .checkbox__area {
+.input__checkbox:checked + .label__checkbox .checkbox__area {
   background-color: var(--accent-color);
   border: none;
 }
 
-.input-checkbox:checked + .label__checkbox .checkbox__icon {
+.input__checkbox:checked + .label__checkbox .checkbox__icon {
   fill: var(--second-text-color);
 }
 

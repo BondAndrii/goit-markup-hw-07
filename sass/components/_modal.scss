@@ -157,7 +157,7 @@
     align-items: center;
 }
 
-.input-checkbox{
+.input__checkbox{
     &:checked+.label__checkbox .checkbox__area {
             background-color: var(--accent-color);
             border: none;
@@ -166,6 +166,9 @@
             fill: var(--second-text-color);
     }
 }
+
+
+
 .checkbox__area {
     position: absolute;
     left: -25px;

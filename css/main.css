@@ -390,6 +390,10 @@ a {
   justify-content: center;
 }
 
+.sots__item--foot + .sots__item--foot {
+  margin-left: 10px;
+}
+
 .sots__link {
   display: flex;
   align-items: center;
@@ -423,10 +427,6 @@ a {
   width: 20px;
   height: 20px;
   fill: currentColor;
-}
-
-.sots__item--foot + .sots__item--foot {
-  margin-left: 10px;
 }
 
 /*-------Розмічаємо секцію постійних клієнтів-------- */
@@ -767,11 +767,6 @@ a {
   margin-bottom: 10px;
 }
 
-/* .modal-form-comm{ 
-    display: flex;
-    flex-direction: column;
-   
-}*/
 .modal__label {
   margin-bottom: 4px;
   font-size: 12px;
@@ -790,6 +785,10 @@ a {
   outline: none;
 }
 
+.modal__input:hover, .modal__input:focus, .modal__input:active {
+  border-color: var(--accent-color);
+}
+
 .modal__textarea {
   padding: 12px 16px;
   resize: none;
@@ -799,23 +798,12 @@ a {
   outline: none;
 }
 
+.modal__textarea:hover, .modal__textarea:focus, .modal__textarea:active {
+  border-color: var(--accent-color);
+}
+
 .label__place {
   position: relative;
-}
-
-.modal__input:hover,
-.modal__textarea:hover {
-  border-color: var(--accent-color);
-}
-
-.modal__input:focus,
-.modal__textarea:focus {
-  border-color: var(--accent-color);
-}
-
-.modal__input:active,
-.modal__textarea:active {
-  border-color: var(--accent-color);
 }
 
 .label__checkbox {
@@ -832,6 +820,13 @@ a {
   color: var(--accent-color);
 }
 
+.input__icon {
+  position: absolute;
+  left: 15px;
+  bottom: 14px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .modal__input:hover + .input__icon {
   fill: var(--accent-color);
 }
@@ -844,13 +839,6 @@ a {
   fill: var(--accent-color);
 }
 
-.input__icon {
-  position: absolute;
-  left: 15px;
-  bottom: 14px;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .modal__checkbox {
   display: flex;
   margin: 20px 0px 30px 0px;
@@ -858,13 +846,12 @@ a {
   align-items: center;
 }
 
-/* .input-checkbox{} */
-.input__checkbox:checked + .label__checkbox .checkbox__area {
+.input-checkbox:checked + .label__checkbox .checkbox__area {
   background-color: var(--accent-color);
   border: none;
 }
 
-.input__checkbox:checked + .label__checkbox .checkbox__icon {
+.input-checkbox:checked + .label__checkbox .checkbox__icon {
   fill: var(--second-text-color);
 }
 

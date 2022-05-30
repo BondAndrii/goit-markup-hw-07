@@ -1,5 +1,13 @@
 @charset "UTF-8";
 /* Задаю основні стилі сторінки */
+body {
+  color: var(--general-text-color);
+  background-color: var(--second-text-color);
+  font-family: Roboto, sans-serif;
+  font-size: var(--main-font);
+  letter-spacing: 0.03em;
+}
+
 :root {
   --general-text-color: #757575;
   --title-text-color: #212121;
@@ -12,14 +20,6 @@
   --bgc-hero-color: rgba(47, 48, 58, 0.4);
   --sotsset-color: #AFB1B8;
   --main-font: font-size: 14px;
-}
-
-body {
-  color: var(--general-text-color);
-  background-color: var(--second-text-color);
-  font-family: Roboto, sans-serif;
-  font-size: var(--main-font);
-  letter-spacing: 0.03em;
 }
 
 /* Задаю утілітарний клас для приховування будь-чого на сторінці */
@@ -315,11 +315,15 @@ a {
 }
 
 .works__title {
+  display: block;
   position: absolute;
   bottom: 0;
   width: 100%;
   margin: 0;
-  padding: 27px 82px 27px 83px;
+  padding-left: auto;
+  padding-right: auto;
+  padding-top: 27px;
+  padding-bottom: 27px;
   font-size: var(--main-font);
   line-height: 1.143;
   text-align: center;
@@ -536,7 +540,7 @@ a {
 
 .card__overlay {
   position: absolute;
-  top: 0;
+  top: 1px;
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   overflow: auto;
@@ -715,7 +719,7 @@ a {
   padding: 40px;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  min-width: 528px;
+  width: 563px;
   min-height: 581px;
   background-color: var(--second-text-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -789,6 +793,15 @@ a {
   outline: none;
 }
 
+.modal__textarea {
+  padding: 12px 16px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+}
+
 .label__place {
   position: relative;
 }
@@ -799,12 +812,12 @@ a {
 }
 
 .modal__input:focus,
-.modal-textarea:focus {
+.modal__textarea:focus {
   border-color: var(--accent-color);
 }
 
 .modal__input:active,
-.modal-textarea:active {
+.modal__textarea:active {
   border-color: var(--accent-color);
 }
 
@@ -818,6 +831,7 @@ a {
 }
 
 .doc {
+  margin-left: 8px;
   color: var(--accent-color);
 }
 
@@ -840,18 +854,9 @@ a {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal__textarea {
-  padding: 12px 16px;
-  resize: none;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  outline: none;
-}
-
 .modal__checkbox {
   display: flex;
-  margin: 20px 51px 30px 52px;
+  margin: 20px 0px 30px 0px;
   display: flex;
   align-items: center;
 }

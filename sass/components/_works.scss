@@ -22,12 +22,16 @@
 }
 
 .works__title {
+    display: block;    
     position: absolute;
     bottom: 0;
     width: 100%;
 
     margin: 0;
-    padding: 27px 82px 27px 83px;
+    padding-left: auto;
+    padding-right: auto;
+    padding-top: 27px;
+    padding-bottom: 27px;
 
     font-size: var(--main-font);
     line-height: 1.143;

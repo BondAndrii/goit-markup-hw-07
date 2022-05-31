@@ -19,7 +19,7 @@ body {
   --brc-herofooter: #2F303A;
   --bgc-hero-color: rgba(47, 48, 58, 0.4);
   --sotsset-color: #AFB1B8;
-  --main-font: font-size: 14px;
+  --main-font: 14px;
 }
 
 /* Задаю утілітарний клас для приховування будь-чого на сторінці */
@@ -716,7 +716,7 @@ a {
   padding: 40px;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  width: 563px;
+  width: 528px;
   min-height: 581px;
   background-color: var(--second-text-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
